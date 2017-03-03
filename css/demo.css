@@ -1,0 +1,87 @@
+*{
+	margin: 10px;
+	padding: 0;
+}
+div{
+    width: 300px;
+    height: 300px;
+    font-size: 8px; 
+    margin: 160px auto;
+}
+/*雪碧图实现*/
+.radio1{
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	background: url(../img/img.png) #fff -23px -10px no-repeat;
+}
+.radio2{
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	background: url(../img/img.png) #fff -23px -10px no-repeat;
+}
+.checkbox{
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	background: url(../img/img.png) #fff -24px -32px no-repeat;
+}
+input{
+    display: none;
+}
+input[type="radio"]:checked +label{
+     background-position:-58px -10px; 
+}
+input{
+	cursor: pointer;
+}
+input[type="checkbox"]:checked+label{
+     background-position: -58px -32px;
+}
+/*伪元素*/
+.rad1,.rad2{
+	display:block;
+	width: 14px;
+	height: 14px;
+    border:1px solid rgb(220,220,220);
+    border-radius: 14px;
+    line-height: 14px;
+    float: left;
+}
+.check{
+	margin-top:36px;
+	display: block;
+	width: 14px;
+	height: 14px;
+    border:1px solid rgb(220,220,220);
+    line-height: 14px;
+    text-align: center;
+}
+input[name="rad"]:checked +label{
+     border-color: rgb(215,62,51);
+}
+input[name="rad"]:checked +label:before{
+ 	content: "";
+ 	display:inline-block;
+ 	width: 6px;
+ 	height:6px;
+ 	border-radius:6px;
+ 	background-color:rgb(215,62,51);
+ 	margin: 4px 0 5px 4px;
+ }
+ input[id="check"]:checked +label{
+     border-color: rgb(215,62,51);
+}
+
+ input[id="check"]:checked +label:before{
+  	content: "\2713";
+  	display:inline-block;
+  	width: 8px;
+  	height:8px;
+  	color:rgb(215,62,51);
+  	font-size:4px;
+  	text-align: center;
+  	line-height: 8px;
+  	font-weight: bold;
+  }
